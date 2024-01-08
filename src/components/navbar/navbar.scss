@@ -1,0 +1,535 @@
+@use 'src/index';
+
+// navbar container section
+.navbar___container {
+    @extend %container;
+    position: sticky;
+    top: 0;
+    z-index: 10000;
+    margin: 1rem auto;
+    background-color: index.$text-white;
+
+    .logo___box {
+
+        margin-right: auto;
+
+        span {
+            font-size: 2.5rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 4rem;
+            
+
+            .logo-link {
+                text-decoration: none;
+                color: index.$orange-500;
+            }
+        }
+    }
+
+    .menu___list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        li {
+            display: flex;
+            padding: 10px 14px;
+            align-items: flex-start;
+            gap: 10px;
+
+
+            .links {
+                text-decoration: none;
+                color: index.$black;
+                font-size: 21px;
+                transition: .2s ease-in-out;
+
+                &:hover {
+                   color: index.$orange-500;
+
+                    &::before {
+                        content: " ";
+                        width: 30px;
+                        height: 2px;
+                        background-color: index.$orange-500;
+                        position: absolute;
+                        bottom: 0;
+                        transition: .2s ease-in-out;
+                    }
+                }
+                
+            }
+
+            .active {
+                color: index.$orange-500;
+                &::before {
+                    content: " ";
+                    width: 30px;
+                    height: 2px;
+                    background-color: index.$orange-500;
+                    position: absolute;
+                    bottom: 0;
+                }
+
+            }
+
+            
+
+            .downloadCV {
+                width: 170px;
+                height: 52px;
+                flex-shrink: 0;
+                border: solid 1px index.$orange-500;
+                border-radius: 5px;
+                background-color: index.$orange-500;
+                cursor: pointer;
+                
+
+                span {
+                    color: index.$text-white;
+                    text-align: justify;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    letter-spacing: 0.63px;
+
+                }
+
+                &:hover {
+                    border: solid 1px index.$orange-500;
+                    background: index.$background;
+
+
+                    span {
+                        color: index.$black;
+                    }
+
+                }
+
+            }
+        }
+
+    }
+
+    .mobile-menu {
+        display: none;
+    }
+    .bar2 {
+        display: none;
+    }
+}
+
+
+/*
+    Responsive xl screen
+
+*/
+
+@media (max-width:index.$break-point-xl ){
+    .navbar___container {
+        .menu___list {
+            li {
+                display: flex;
+                padding: 5px 10px;
+                align-items: flex-start;
+                gap: 5px;
+
+                .links {
+                    font-size: 18px;
+                }
+
+    
+                .downloadCV {
+                    width: 100px;
+                    height: 44px;
+                    flex-shrink: 0;
+                    border: solid 1px index.$orange-500;
+                    border-radius: 5px;
+                    background-color: index.$orange-500;
+                    cursor: pointer;
+                    
+    
+                    span {
+                        color: index.$text-white;
+                        text-align: justify;
+                        font-style: normal;
+                        font-weight: 200;
+                        font-size: 10px;
+                        line-height: normal;
+                        letter-spacing: 0.60px;
+    
+                    }
+    
+                }
+            }
+    
+        }
+    }
+}
+
+
+
+/*
+    Responsive table
+
+*/
+@media (max-width: index.$break-point-md){
+    .navbar___container {
+        .logo___box {
+
+            span {
+                font-size: 1.5rem;
+            }
+        }
+        .menu___list {
+
+            li{
+                display: none;
+            }
+            
+        }
+        .bar2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 0;
+            
+            li {
+                .icon {
+                    cursor: pointer;
+                    font-size: 2rem;
+                }
+            }
+        }
+
+        .mobile-menu {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            background: index.$text-white;
+            width: 300px;
+            height: 100vh;
+            top: 64px;
+            right: 0;
+
+            li {
+                padding: 1rem 9%;
+
+                .links {
+                    text-decoration: none;
+                    color: index.$black;
+                    font-size: 21px;
+                    transition: .2s ease-in-out;
+
+                    &:hover {
+                        color: index.$orange-500;
+     
+                         &::before {
+                            content: " ";
+                            width: 30px;
+                            height: 2px;
+                            background-color: index.$orange-500;
+                            position: absolute;
+                            bottom: 0;
+                            transition: .2s ease-in-out;
+                         }
+                     }
+                     
+                }
+
+                .active {
+                    color: index.$orange-500;
+                    &::before {
+                        content: " ";
+                        width: 30px;
+                        height: 2px;
+                        background-color: index.$orange-500;
+                        position: absolute;
+                        bottom: 0;
+                    }
+    
+                }
+
+                .downloadCV {
+                    width: 170px;
+                    height: 52px;
+                    flex-shrink: 0;
+                    border: solid 1px index.$orange-500;
+                    border-radius: 5px;
+                    background-color: index.$orange-500;
+                    cursor: pointer;
+                    
+    
+                    span {
+                        color: index.$text-white;
+                        text-align: justify;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                        letter-spacing: 0.63px;
+    
+                    }
+    
+                    &:hover {
+                        border: solid 1px index.$orange-500;
+                        background: index.$background;
+    
+    
+                        span {
+                            color: index.$black;
+                        }
+    
+                    }
+    
+                }
+            }
+
+
+        }
+    }
+}
+
+
+/*
+
+    Responsive mobile phone size L
+
+*/
+
+@media (max-width: index.$break-point-sm){
+    .navbar___container {
+        .logo___box {
+
+            span {
+                font-size: 1.2rem;
+            }
+        }
+        .menu___list {
+
+            li{
+                display: none;
+            }
+            
+        }
+        .bar2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 0;
+
+            li {
+                .icon {
+                    cursor: pointer;
+                    font-size: 1rem;
+                }
+            }
+        }
+
+        .mobile-menu {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            width: 250px;
+            height: 100vh;
+            top: 64px;
+            right: 0;
+
+            li {
+                padding: 1rem 9%;
+
+                .links {
+                    text-decoration: none;
+                    color: index.$black;
+                    font-size: 18px;
+                    transition: .2s ease-in-out;
+
+                    &:hover {
+                        color: index.$orange-500;
+     
+                         &::before {
+                            content: " ";
+                            width: 30px;
+                            height: 2px;
+                            background-color: index.$orange-500;
+                            position: absolute;
+                            bottom: 0;
+                            transition: .2s ease-in-out;
+                         }
+                     }
+                     
+                }
+
+                .active {
+                    color: index.$orange-500;
+                    &::before {
+                        content: " ";
+                        width: 30px;
+                        height: 2px;
+                        background-color: index.$orange-500;
+                        position: absolute;
+                        bottom: 0;
+                    }
+    
+                }
+
+                .downloadCV {
+                    width: 140px;
+                    height: 50px;
+                    flex-shrink: 0;
+                    border: solid 1px index.$orange-500;
+                    border-radius: 5px;
+                    background-color: index.$orange-500;
+                    cursor: pointer;
+                    
+    
+                    span {
+                        color: index.$text-white;
+                        text-align: justify;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                        letter-spacing: 0.63px;
+    
+                    }
+    
+                    &:hover {
+                        border: solid 1px index.$orange-500;
+                        background: index.$background;
+    
+    
+                        span {
+                            color: index.$black;
+                        }
+    
+                    }
+    
+                }
+            }
+
+
+        }
+    }
+}
+
+
+/*
+    Responsive mobile small screen
+*/
+
+@media (max-width: index.$break-point-xs){
+    .navbar___container {
+        .logo___box {
+
+            span {
+                font-size: 1rem;
+            }
+        }
+        .menu___list {
+
+            li{
+                display: none;
+            }
+            
+        }
+        .bar2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 0;
+
+            li {
+                .icon {
+                    cursor: pointer;
+                    font-size: 1rem;
+                }
+            }
+        }
+
+        .mobile-menu {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            width: 150px;
+            height: 100vh;
+            top: 64px;
+            right: 0;
+
+            li {
+                padding: .7rem 7%;
+
+                .links {
+                    text-decoration: none;
+                    color: index.$black;
+                    font-size: 14px;
+                    transition: .2s ease-in-out;
+
+                    &:hover {
+                        color: index.$orange-500;
+     
+                         &::before {
+                            content: " ";
+                            width: 30px;
+                            height: 2px;
+                            background-color: index.$orange-500;
+                            position: absolute;
+                            bottom: 0;
+                            transition: .2s ease-in-out;
+                         }
+                     }
+                     
+                }
+
+                .active {
+                    color: index.$orange-500;
+                    &::before {
+                        content: " ";
+                        width: 30px;
+                        height: 2px;
+                        background-color: index.$orange-500;
+                        position: absolute;
+                        bottom: 0;
+                    }
+    
+                }
+
+                .downloadCV {
+                    width: 100px;
+                    height: 40px;
+                    flex-shrink: 0;
+                    border: solid 1px index.$orange-500;
+                    border-radius: 5px;
+                    background-color: index.$orange-500;
+                    cursor: pointer;
+                    
+    
+                    span {
+                        color: index.$text-white;
+                        text-align: justify;
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 10px;
+                        line-height: normal;
+                        letter-spacing: 0.60px;
+    
+                    }
+    
+                    &:hover {
+                        border: solid 1px index.$orange-500;
+                        background: index.$background;
+    
+    
+                        span {
+                            color: index.$black;
+                        }
+    
+                    }
+    
+                }
+            }
+        }
+    }
+}

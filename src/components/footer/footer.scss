@@ -1,0 +1,62 @@
+@use 'src/index';
+
+.footer-container {
+    @extend %container;
+    flex-direction: column;
+    .logo {
+        display: flex;
+        justify-content: center;
+        margin-top: 3rem;
+        li {
+
+            .link {
+                font-size: 2rem;
+                font-weight: 800;
+                color: index.$orange-500;
+                text-decoration: none;
+            }
+        }
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: center;
+        margin-top: 4rem;
+        li {
+            padding: 1rem;
+
+            a {
+                color: index.$black;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.license {
+    background: index.$gray;
+    padding: 5px;
+    p {
+        text-align: center; 
+        color: index.$text-white;
+        span {
+            color: index.$orange-500;
+        }
+    }
+} 
+
+
+@media (max-width: index.$break-point-sm){
+    .footer-container {
+        .navbar {
+            display: flex;
+            flex-direction: column;
+
+            li {
+                display: flex;
+                justify-content: center;
+                padding: 5px;
+            }
+        }
+    }
+}

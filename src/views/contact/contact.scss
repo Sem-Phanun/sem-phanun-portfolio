@@ -1,0 +1,64 @@
+@use "src/index";
+
+.contact-container {
+  @extend %container;
+  margin-top: 3rem;
+  flex-direction: column;
+
+  .titleHeader {
+    h1 {
+      font-size: 2rem;
+      text-align: center;
+    }
+    p {
+      text-align: center;
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem auto;
+    width: 370px;
+    gap: 1rem;
+
+    li {
+
+        border-radius: 3rem;
+        padding: 1rem;
+        border: 1px solid index.$orange-500;
+        
+        a {
+            text-decoration: none;
+            font-size: 1.5rem;
+            color: index.$black;
+        
+
+            .contact-icons {
+                font-size: 2rem;
+            }
+        }
+    }
+  }
+}
+
+
+@media (max-width: index.$break-point-sm){
+    .contact-container {
+        .content {
+            width: 250px;
+
+            li {
+                padding: .5rem;
+                a {
+                    font-size: 1rem; 
+
+                    .contact-icons {
+                        font-size: 1rem;
+                    }
+                }
+
+            }
+        }
+    }
+}

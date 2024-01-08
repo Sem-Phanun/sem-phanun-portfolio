@@ -1,0 +1,181 @@
+@use 'src/index';
+
+.skill___container {
+    @extend %container;
+    margin-top: 4rem;
+    align-items: center;
+    flex-direction: column;
+
+
+    .title-skill {
+        h1 {
+            font-size: 2rem;
+            font-weight: 600;
+        }
+    }
+    .skill-wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 800px;
+        margin: 5px auto;
+        background-color: index.$text-white;
+
+        li {
+            margin: 10px 0;
+            padding: 0;
+
+            h3 {
+                font-weight: normal;
+            }
+
+            .bar {
+                width: 100%;
+                background-color: index.$black;
+                height: 20px;
+                border-radius: .5rem;
+                overflow: hidden;
+                transition: all cubic-bezier(.25, .8, .25, 1);
+
+                span {
+                    display: flex;
+                    height: 20px;
+                    border-radius: .5rem;
+                    background: index.$orange-500;
+                }
+
+                .javascript{
+                    width: 85%;
+                    animation: javascript 3s;
+                }
+
+                .react {
+                    width: 75%;
+                    animation: reactjs 3s;
+                }
+                .node {
+                    width: 70%;
+                    animation: nodejs 3s;
+                }
+
+                .webdesign {
+                    width: 90%;
+                    animation: webdesign 3s;
+                }
+
+                .database {
+                    width: 70%;
+                    animation: database 3s;
+                }
+                .java {
+                    width: 80%;
+                    animation: java 3s;
+                }
+                .springcore {
+                    width: 60%;
+                    animation: springcore 3s;
+                }
+
+                @keyframes javascript{
+                    0% {
+                        width: 0%;
+                    }
+                    100% {
+                        width: 85%;
+                    }
+                }
+
+                @keyframes reactjs {
+                    0%{
+                        width: 0%;
+                    }
+                    100%{
+                        width: 75%;
+                    }
+                }
+
+                @keyframes nodejs {
+                    0%{
+                        width: 0%;
+                    }
+                    100%{
+                        width: 70%;
+                    }
+                }
+
+                @keyframes webdesign {
+                    0%{
+                        width: 0%;
+                    }
+                    100%{
+                        width: 90%;
+                    }
+                }
+
+                @keyframes database {
+                    0%{
+                        width: 0%;
+                    }
+                    100%{
+                        width: 70%;
+                    }
+                }
+
+                @keyframes java {
+                    0%{
+                        width: 0%;
+                    }
+                    100%{
+                        width: 80%;
+                    }
+                }
+
+                @keyframes springcore {
+                    0%{
+                        width: 0%;
+                    }
+                    100%{
+                        width: 60%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: index.$break-point-md){
+    .skill___container{
+        .skill-wrapper {
+            width: 600px;
+        }
+    }
+}
+
+
+@media (max-width: index.$break-point-sm){
+    .skill___container {
+        .title-skill {
+            h1 {
+                font-size: 1rem;
+            }
+        }
+
+        .skill-wrapper {
+            width: 300px;
+
+            li {
+
+                h3 {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 320px){
+    .skill___container {
+        .skill-wrapper {
+            width: 260px;
+        }
+    }
+}

@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+
+// color style
+$background: #fff;
+$orange-500: #ff6300;
+$black: #000;
+$text-white: #fff;
+$gray: #545454;
+
+
+// break points responsive
+$break-point-xs: 376px;
+$break-point-sm: 576px;
+$break-point-md: 768px;
+$break-point-lg: 900px;
+$break-point-xl: 1200px; 
+
+$width-80: 80%;
+$margin-auto: auto;
+$display-flex: flex;
+$justify-content: center;
+
+*{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  font-family: 'Poppins',sans-serif;
+}
+
+%container {
+  width: $width-80;
+  margin: 1rem $margin-auto;
+  display: $display-flex;
+  justify-content: $justify-content;
+}
+
+%profile {
+  width: 400px;
+  height: 400px;
+}

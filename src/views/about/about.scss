@@ -1,0 +1,118 @@
+@use "src/index";
+
+.about___container {
+  @extend %container;
+  margin-top: 4rem;
+  justify-content: center;
+  align-items: center;
+
+  .profile-picture {
+    width: 300px;
+    height: 300px;
+    margin-right: 2rem;
+
+    .profile-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 100%;
+    }
+  }
+
+  .about-block {
+    margin-left: 6rem;
+    width: 700px;
+
+    h1 {
+      font-weight: 600;
+      font-size: 2rem;
+    }
+
+    p {
+      margin-top: 1rem;
+      letter-spacing: 1px;
+      span {
+        letter-spacing: 1px;
+      }
+
+      strong {
+        font-weight: 800;
+      }
+    }
+  }
+}
+
+@media (max-width: index.$break-point-xl) {
+  .about___container {
+    .profile-picture {
+      height: 160px;
+      width: 200px;
+    }
+
+    .about-block {
+        h1 {
+            font-size: 2rem;
+        }
+    }
+  }
+}
+
+@media (max-width: index.$break-point-md){
+    .about___container {
+        .profile-picture {
+            width: 250px;
+            height: 120px;
+            margin-left: 2rem;
+        }
+
+        .about-block {
+            h1 {
+                font-size: 1rem;
+            }
+            p {
+                font-size: .7rem;
+            }
+        }
+    }
+}
+
+@media (max-width: index.$break-point-sm){
+    .about___container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .profile-picture {
+            width: 120px;
+            width: 120px;
+        }
+
+        .about-block {
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            margin-left: -1.6rem;
+
+
+        }
+    }
+}
+
+@media (max-width: index.$break-point-xs){
+    .about___container {
+        .about-block {
+            width: 250px;
+            margin-left: -2rem;
+        }
+    }
+}
+
+@media (max-width: 320px){
+    .about___container {
+        .about-block {
+            width: 200px;
+            margin-left: -1.8rem;
+        }
+    }
+}
