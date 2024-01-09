@@ -3,6 +3,7 @@ import { useState } from "react";
 import { HiMiniBars2 } from "react-icons/hi2";
 import { MdClose } from "react-icons/md";
 import "./navbar.scss";
+import { navbar } from "../../data/data";
 
 
 const Navbar = () => {
@@ -34,13 +35,15 @@ const Navbar = () => {
         <ul className={toggle ? "mobile-menu" : "menu___list"}
           onClick={()=>setToggle(false)}
         >
-            <li>
-                <NavLink to={"/"} className={"links"}>Home</NavLink>
-            </li>
-            <li><NavLink to={"/about"} className={"links"}>About Me</NavLink></li>
-            <li><NavLink to={"/skill"} className={"links"}>Skill</NavLink></li>
-            <li><NavLink to={"/project"} className={"links"}>Project</NavLink></li>
-            <li><NavLink to={"/contact"} className={"links"}>Contact</NavLink></li>
+            {
+              navbar.map((list,index)=> {
+                return (
+                  <li key={index}>
+                    <NavLink className={"links"} to={list.route}>{list.name}</NavLink>
+                  </li>
+                )
+              })
+            }
             <li>
               <button className="downloadCV"
               

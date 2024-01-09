@@ -1,4 +1,4 @@
-import Profile from '../../assets/image/myimage.jpg'
+import { introduce } from '../../data/data';
 import "./hero.scss";
 import { FaInstagram,FaLinkedin,FaGithub } from "react-icons/fa";
 
@@ -6,15 +6,22 @@ const Hero = () => {
   return (
     <>
       <div className="hero___container">
-        <article className="hero-section">
-          <p className="greeting">Hello i'm </p>
-          <h1 className="box">Phanun</h1>
-          <span className="position___title">Full Stack Developer</span>
-        </article>
-
-        <figure className="profile___image">
-            <img src={Profile} className="img-box"/>
-        </figure>
+        {
+          introduce.map((hero, index)=> {
+            return (
+              <>
+                <article className='hero-section' key={index}>
+                  <p className='greeting'>{hero.greeting}</p>
+                  <h1 className='box'>{hero.name}</h1>
+                  <p className="position___title">{hero.role}</p>
+                </article>
+                <figure className="profile___image">
+                  <img src={hero.image} className="img-box"/>
+                </figure>
+              </>
+            )
+          })
+        }
       </div>
 
       <div className="social-icons">

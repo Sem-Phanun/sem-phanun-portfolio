@@ -26,6 +26,7 @@
     h1 {
       font-weight: 600;
       font-size: 2rem;
+      color: index.$orange-500;
     }
 
     p {
@@ -68,6 +69,7 @@
         .about-block {
             h1 {
                 font-size: 1rem;
+                color: index.$orange-500;
             }
             p {
                 font-size: .7rem;
@@ -85,6 +87,7 @@
         .profile-picture {
             width: 120px;
             width: 120px;
+            margin-top: -2rem;
         }
 
         .about-block {
@@ -93,8 +96,12 @@
             flex-direction: column;
             justify-content: start;
             margin-left: -1.6rem;
+            margin-top: 2rem;
 
-
+            h1 {
+              text-align: center;
+              color: index.$orange-500;
+            }
         }
     }
 }

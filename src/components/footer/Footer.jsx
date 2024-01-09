@@ -11,12 +11,12 @@ const Footer = () => {
         </div>
         <nav className="navbar">
           <li>
-            <a href="/">Home</a>
+            <Link to={"/"}>Home</Link>
           </li>
-          <li><a href="/about">About Me</a></li>
-          <li><a href="/skill">Skill</a></li>
-          <li><a href="/porject">Project</a></li>
-          <li><a href="/contact">Contact</a></li>
+          <li><Link to="/about">About Me</Link></li>
+          <li><Link to="/skill">Skill</Link></li>
+          <li><Link to="/porject">Project</Link></li>
+          <li><Link to="/contact">Contact</Link></li>
         </nav>
       </footer>
       <footer className='license'>

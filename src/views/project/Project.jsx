@@ -1,6 +1,4 @@
-import ApiImage from '../../assets/image/api.jpg' 
-import PhoneShop from '../../assets/image/phoneshop.png'
-import Todo from '../../assets/image/Todo.jpg'
+import { projectList } from '../../data/data'
 import './project.scss'
 const Project = () => {
   return (
@@ -11,39 +9,25 @@ const Project = () => {
           <p>Let's explore my projects.</p>
         </article>
 
+
         <div className="content-wrapper">
-          <div className="project-box">
-            <figure className="project-image">
-              <img src={ApiImage}/>
-            </figure>
-            <article className='description'>
-              <h1>Electronic store</h1>
-              <p>This Api project using nodejs to build.</p>
-              <a className='link-github' href="https://github.com/Sem-Phanun/ecommerce_api">Github</a>
-            </article>
-          </div>
 
-          <div className="project-box">
-            <figure className="project-image">
-              <img src={PhoneShop}/>
-            </figure>
-            <article className='description'>
-              <h1>Api project</h1>
-              <p>This project is using React.js to build.</p>
-              <a className='link-github' href="https://github.com/Sem-Phanun/ecommerce_api">Github</a>
-            </article>
-          </div>
-
-          <div className="project-box">
-            <figure className="project-image">
-              <img src={Todo}/>
-            </figure>
-            <article className='description'>
-              <h1>React + Firebase</h1>
-              <p>Simple Todo Application using React.Js</p>
-              <a className='link-github' href="https://github.com/Sem-Phanun/React_Firebase">Github</a>
-            </article>
-          </div>
+          {
+            projectList.map((element,index)=> {
+              return (
+                <div className='project-box' key={index}>
+                  <figure className="project-image">
+                    <img src={element.image}/>
+                  </figure>
+                  <article className="description">
+                    <h1>{element.title}</h1>
+                    <p>{element.description}</p>
+                    <a href={element.link}>source code</a>
+                  </article>
+                </div>
+              )
+            })
+          }
         </div>
       </main>
     </>

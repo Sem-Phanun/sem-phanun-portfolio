@@ -190,10 +190,13 @@
             
         }
         .bar2 {
+            position: absolute;
+            right: 0;
+            top: 14px;
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-shrink: 0;
+
             
             li {
                 .icon {
@@ -205,16 +208,20 @@
 
         .mobile-menu {
             position: absolute;
+            top: 0;
             display: flex;
+            margin-top: -1rem;
             flex-direction: column;
-            justify-content: flex-start;
             background: index.$text-white;
             width: 300px;
-            height: 100vh;
-            top: 64px;
-            right: 0;
+            height: 110vh;
+            right: -75px;
+            box-shadow: 1px 0 2px saddlebrown;
 
             li {
+                display: flex;
+                align-items: center;
+                transform: translateY(100%);
                 padding: 1rem 9%;
 
                 .links {
@@ -232,7 +239,7 @@
                             height: 2px;
                             background-color: index.$orange-500;
                             position: absolute;
-                            bottom: 0;
+                            bottom: -.7rem;
                             transition: .2s ease-in-out;
                          }
                      }
@@ -247,14 +254,14 @@
                         height: 2px;
                         background-color: index.$orange-500;
                         position: absolute;
-                        bottom: 0;
+                        bottom: -.02rem;
                     }
     
                 }
 
                 .downloadCV {
                     width: 170px;
-                    height: 52px;
+                    height: 50px;
                     flex-shrink: 0;
                     border: solid 1px index.$orange-500;
                     border-radius: 5px;
@@ -285,7 +292,6 @@
     
                 }
             }
-
 
         }
     }
@@ -329,51 +335,13 @@
 
         .mobile-menu {
             position: absolute;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
             width: 250px;
-            height: 100vh;
-            top: 64px;
-            right: 0;
+            height: 110vh;
+            top: 0;
+            right: -50px;
 
             li {
                 padding: 1rem 9%;
-
-                .links {
-                    text-decoration: none;
-                    color: index.$black;
-                    font-size: 18px;
-                    transition: .2s ease-in-out;
-
-                    &:hover {
-                        color: index.$orange-500;
-     
-                         &::before {
-                            content: " ";
-                            width: 30px;
-                            height: 2px;
-                            background-color: index.$orange-500;
-                            position: absolute;
-                            bottom: 0;
-                            transition: .2s ease-in-out;
-                         }
-                     }
-                     
-                }
-
-                .active {
-                    color: index.$orange-500;
-                    &::before {
-                        content: " ";
-                        width: 30px;
-                        height: 2px;
-                        background-color: index.$orange-500;
-                        position: absolute;
-                        bottom: 0;
-                    }
-    
-                }
 
                 .downloadCV {
                     width: 140px;
@@ -454,13 +422,14 @@
             flex-direction: column;
             justify-content: flex-start;
             width: 150px;
-            height: 100vh;
-            top: 64px;
-            right: 0;
+            height: 110vh;
+            top: 0;
+            right: -35px;
 
             li {
-                padding: .7rem 7%;
-
+                margin-top: 1rem;
+                transform: translateY(100%);
+                padding-top: 10px;
                 .links {
                     text-decoration: none;
                     color: index.$black;
@@ -481,19 +450,6 @@
                          }
                      }
                      
-                }
-
-                .active {
-                    color: index.$orange-500;
-                    &::before {
-                        content: " ";
-                        width: 30px;
-                        height: 2px;
-                        background-color: index.$orange-500;
-                        position: absolute;
-                        bottom: 0;
-                    }
-    
                 }
 
                 .downloadCV {

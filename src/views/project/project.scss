@@ -22,16 +22,19 @@
         justify-content: flex-start;
         flex-wrap: wrap;
         gap: 2rem;
-        margin-left: 2.5rem;
+
+
         .project-box {
+            width: 300px;
             margin-top: 2rem;
             box-shadow: 1px 0 3px index.$orange-500;
             border: 1px solid index.$orange-500;
             border-radius: 1rem;
-
+            margin-left: 2rem;
+            transition: .3s;
 
             .project-image {
-                width: 300px;
+                width: 280px;
                 height: 200px;
                 cursor: pointer;
 
@@ -40,10 +43,10 @@
                     height: 100%;
                     padding: 10px;
                     border-radius: 2rem;
-                   
                 
                 }
             }
+
             .description {
                 margin-top: 1rem;
                 padding: 1rem;
@@ -69,6 +72,10 @@
                     }
                 }
             }
+
+            &:hover {
+                transform: scale(1.1);
+            }
         }
     }
 }
@@ -77,14 +84,13 @@
 @media (max-width: index.$break-point-xl) {
     .project___container {
         .content-wrapper {
-            display: flex;
-            justify-content: center;
-            margin-left: -1rem;
-            padding-left: 15px;
-            gap: 1rem;
-            .project-box {
-                width: 250px;
 
+            gap: 3rem;
+            margin-left: 2rem;
+            .project-box {
+                width: 260px;
+                margin-left: -2rem;
+                
                 .project-image {
                     width: 260px;
                     height: 200px;
@@ -93,6 +99,56 @@
                         object-fit: cover;
                         width: 90%;
                     }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: index.$break-point-md){
+    .project___container {
+        .content-wrapper {
+            margin-left: 4.5rem;
+
+            .description {
+                h1 {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: index.$break-point-xs){
+    .project___container {
+        .content-wrapper {
+            margin-left: 3.2rem;
+
+            .project-box {
+                .description {
+                    h1 {
+                        font-size: .9rem;
+                    }
+                    p {
+                        font-size: .8rem;
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 320px){
+    .project___container {
+        .content-wrapper {
+            gap: 1rem;
+            .project-box {
+                width: 220px;
+
+                .project-image {
+                    width: 220px;
                 }
             }
         }
