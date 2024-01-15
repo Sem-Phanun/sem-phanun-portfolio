@@ -1,6 +1,23 @@
 import { Link } from 'react-router-dom'
 import './footer.scss'
+import { useEffect, useState } from 'react'
+import { database } from "../../firebase/firebase";
+import { collection, onSnapshot, query } from "firebase/firestore";
+
 const Footer = () => {
+  const [list, setList] = useState([])
+
+  useEffect(()=> {
+    const request = query(collection(database, 'dataList'))
+    const handleReq = onSnapshot(request, (querySnapshot)=> {
+      let dataArr = []
+      querySnapshot.forEach((doc)=> {
+        dataArr.push({...doc.data(), id: doc.id})
+      })
+      setList(dataArr)
+    })
+    return ()=> handleReq
+  },[])
   return (
     <>
       <footer className='footer-container'>
@@ -10,13 +27,16 @@ const Footer = () => {
           </li>
         </div>
         <nav className="navbar">
-          <li>
-            <Link to={"/"}>Home</Link>
-          </li>
-          <li><Link to="/about">About Me</Link></li>
-          <li><Link to="/skill">Skill</Link></li>
-          <li><Link to="/porject">Project</Link></li>
-          <li><Link to="/contact">Contact</Link></li>
+          {
+            list.map((data, index)=> {
+              return(
+                <li key={index} >
+                  <Link to={data.route}>{data.menu}</Link>
+                </li>
+              )
+            })
+          }
+          
         </nav>
       </footer>
       <footer className='license'>

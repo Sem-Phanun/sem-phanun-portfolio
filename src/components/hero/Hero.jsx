@@ -1,13 +1,57 @@
-import { introduce } from '../../data/data';
+import { useEffect, useState } from 'react';
 import "./hero.scss";
+import Profile from '../../assets/image/myimage.jpg'
 import { FaInstagram,FaLinkedin,FaGithub } from "react-icons/fa";
-
+import { database } from '../../firebase/firebase';
+import { query, onSnapshot,collection, doc } from 'firebase/firestore'
 const Hero = () => {
+  const [data, setData] = useState([])
+  useEffect(()=> {
+    getData()
+  },[])
+
+  const getData = async () => {
+    try{
+
+      const subItem = await query(collection, "subItem")
+      const unsubscribe = onSnapshot(subItem, (querySnapshot)=> {
+        let listItem = []
+        querySnapshot.forEach((doc)=> {
+          listItem.push({...doc.data(), id: doc.id})
+        })
+        setData(listItem)
+        console.log(listItem)
+      })
+    }catch(error){
+      console.error("Error fetching: ", error)
+    }
+  }
+  // const getData = async () => {
+  //   try {
+  //     const items = await query(collection(database, 'dataList'),collection(database,'subItem'));
+  //     const itemCollection = items.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
+  //     setData(itemCollection);
+  //     console.log(data)
+  //   } catch (error) {
+  //     console.error('Error fetching:', error);
+  //   }
+  // }
+  // const getData = async () => {
+  //   const req = query(collection(database, 'dataList'))
+  //   const handleReq = await onSnapshot(req, (querySnapshot)=> {
+  //     let arrList = []
+  //     querySnapshot.forEach((doc)=> {
+  //       arrList.push({...doc.data(), id: doc.id})
+  //     })
+  //     setData(arrList)
+  //   })
+  //   return ()=> handleReq
+  //}
   return (
     <>
       <div className="hero___container">
         {
-          introduce.map((hero, index)=> {
+          data.map((hero, index)=> {
             return (
               <>
                 <article className='hero-section' key={index}>
@@ -15,13 +59,14 @@ const Hero = () => {
                   <h1 className='box'>{hero.name}</h1>
                   <p className="position___title">{hero.role}</p>
                 </article>
-                <figure className="profile___image">
-                  <img src={hero.image} className="img-box"/>
-                </figure>
               </>
             )
           })
+          
         }
+        <figure className="profile___image">
+          <img src={Profile} className="img-box"/>
+        </figure>
       </div>
 
       <div className="social-icons">
