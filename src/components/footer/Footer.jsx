@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import Logo from '../../assets/logo/Bright.png'
 import './footer.scss'
 const Footer = () => {
   return (
@@ -6,7 +7,9 @@ const Footer = () => {
       <footer className='footer-container'>
         <div className="logo">
           <li>
-            <Link className='link' to={"/"}>Bright.</Link>
+            <Link className='link' to={"/"}>
+              <img src={Logo}/>
+            </Link>
           </li>
         </div>
         <nav className="navbar">
@@ -15,7 +18,7 @@ const Footer = () => {
           </li>
           <li><Link to="/about">About Me</Link></li>
           <li><Link to="/skill">Skill</Link></li>
-          <li><Link to="/porject">Project</Link></li>
+          <li><Link to="/project">Project</Link></li>
           <li><Link to="/contact">Contact</Link></li>
         </nav>
       </footer>

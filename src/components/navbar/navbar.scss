@@ -10,19 +10,18 @@
     background-color: index.$text-white;
 
     .logo___box {
-
         margin-right: auto;
-
+        width: 14rem;
         span {
-            font-size: 2.5rem;
-            font-style: normal;
-            font-weight: 700;
-            line-height: 4rem;
-            
 
             .logo-link {
                 text-decoration: none;
                 color: index.$orange-500;
+                width: 10px;
+                img {
+                    width: 100%;
+                    object-fit: cover;
+                }
             }
         }
     }

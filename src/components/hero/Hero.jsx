@@ -7,10 +7,10 @@ const Hero = () => {
     <>
       <div className="hero___container">
         {
-          introduce.map((hero, index)=> {
+          introduce.map((hero)=> {
             return (
               <>
-                <article className='hero-section' key={index}>
+                <article className='hero-section'>
                   <p className='greeting'>{hero.greeting}</p>
                   <h1 className='box'>{hero.name}</h1>
                   <p className="position___title">{hero.role}</p>

@@ -3,6 +3,7 @@ import PhoneShop from '../assets/image/phoneshop.png'
 import Todo from '../assets/image/Todo.jpg'
 import Profile from '../assets/image/profile.jpg'
 import Hero from '../assets/image/myimage.jpg'
+import ChatApp from '../assets/image/chatapp.jpg'
 export const navbar = [
     {
         id: 1,
@@ -53,15 +54,23 @@ export const projectList = [
         title: "Simple Todo List",
         description: "Todo application with firebase",
         link: "https://github.com/Sem-Phanun/React_Firebase"
+    },
+    {
+        id: 4,
+        image: ChatApp,
+        title: "Chat Application",
+        description: "Chat App with firebase",
+        link: "https://github.com/Sem-Phanun/real-time-chat-app"
     }
 ]
 
 
 export const introduce = [
     {
+        id: 1,
         greeting: "Hello i'm",
         name: "Phanun",
-        role: "Full Stack Developer",
+        role: "React Developer",
         image: Hero
     }
 ]

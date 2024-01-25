@@ -2,6 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
 import { HiMiniBars2 } from "react-icons/hi2";
 import { MdClose } from "react-icons/md";
+import Logo from '../../assets/logo/Bright.png'
 import "./navbar.scss";
 import { navbar } from "../../data/data";
 
@@ -23,7 +24,9 @@ const Navbar = () => {
 
         <li className="logo___box">
           <span>
-            <Link to={'/'} className="logo-link">Bright.</Link>
+            <Link to={'/'} className="logo-link">
+              <img src={Logo}/>
+            </Link>
           </span>
 
         </li>
