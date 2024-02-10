@@ -2,65 +2,59 @@ import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
 import { HiMiniBars2 } from "react-icons/hi2";
 import { MdClose } from "react-icons/md";
-import Logo from '../../assets/logo/Bright.png'
 import "./navbar.scss";
 import { navbar } from "../../data/data";
 
-
 const Navbar = () => {
-
-  const [toggle, setToggle] = useState(false)
+  const [toggle, setToggle] = useState(false);
 
   return (
     <>
       {/* =========================================
                       Navigation Bar
           =========================================*/}
-      <nav className="navbar___container">
-
+      <section className="navbar___container">
         {/* =======================================
                       Logo Block
             =======================================*/}
+        <nav className="navbar-wrapper">
+          <li className="logo___box">
+            <span>
+              <Link to={"/"} className="logo-link">
+                <span>Bright</span>
+              </Link>
+            </span>
+          </li>
 
-        <li className="logo___box">
-          <span>
-            <Link to={'/'} className="logo-link">
-              <img src={Logo}/>
-            </Link>
-          </span>
-
-        </li>
-
-        {/* =======================================
+          {/* =======================================
                         Menu List
             =======================================*/}
 
-        <ul className={toggle ? "mobile-menu" : "menu___list"}
-          onClick={()=>setToggle(false)}
-        >
-            {
-              navbar.map((list,index)=> {
-                return (
-                  <li key={index}>
-                    <NavLink className={"links"} to={list.route}>{list.name}</NavLink>
-                  </li>
-                )
-              })
-            }
+          <ul
+            className={toggle ? "mobile-menu" : "menu___list"}
+            onClick={() => setToggle(false)}
+          >
+            {navbar.map((list, index) => {
+              return (
+                <li key={index}>
+                  <NavLink className={"links"} to={list.route}>
+                    {list.name}
+                  </NavLink>
+                </li>
+              );
+            })}
+          </ul>
+          <ul className="bar2" onClick={() => setToggle(!toggle)}>
             <li>
-              <button className="downloadCV"
-              
-              >
-                <span>Download CV</span>
-              </button>
+              {toggle ? (
+                <MdClose className="icon" />
+              ) : (
+                <HiMiniBars2 className="icon" />
+              )}
             </li>
-        </ul>
-        <ul className="bar2"
-              onClick={()=> setToggle(!toggle)}
-            >
-            <li>{toggle ? <MdClose className="icon"/> : <HiMiniBars2 className="icon"/>}</li>
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      </section>
     </>
   );
 };

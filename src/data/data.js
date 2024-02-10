@@ -1,8 +1,7 @@
 import ApiImage from '../assets/image/api.jpg'
 import PhoneShop from '../assets/image/phoneshop.png'
 import Todo from '../assets/image/Todo.jpg'
-import Profile from '../assets/image/profile.jpg'
-import Hero from '../assets/image/myimage.jpg'
+import Hero from '../assets/image/me.jpg'
 import ChatApp from '../assets/image/chatapp.jpg'
 export const navbar = [
     {
@@ -25,11 +24,6 @@ export const navbar = [
         name: "Project",
         route: "/project",
     },
-    {
-        id: 5,
-        name: "Contact",
-        route: "/contact"
-    }
 ]
 
 
@@ -79,8 +73,8 @@ export const introduce = [
 
 export const aboutMe = [
     {
-        profile: Profile,
+        profile: Hero,
         title: "About Me",
-        description: "Hello I'm Phanun. I'm from kampong speu, senior student at Royal University of Phnom Penh. Major: Computer Science and Engineering. I am excited about leaveraging my skills and knowlege in the dynamic world of Technology."
+        description: "Hello I'm Phanun know as Bright. I'm from kampong speu, senior student at Royal University of Phnom Penh. Major: Computer Science and Engineering. I am excited about leaveraging my skills and knowlege in the dynamic world of Technology."
     }
 ]

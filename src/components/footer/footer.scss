@@ -1,20 +1,30 @@
 @use 'src/index';
-
+$text-gray: #777777;
 .footer-container {
-    @extend %container;
-    flex-direction: column;
+    // @extend %container;
+    padding: 6rem 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    
+    background-color: $text-gray;
     .logo {
         display: flex;
+        flex-direction: column;
+        align-items: center;
         justify-content: center;
-        margin-top: 3rem;
-        li {
+        nav {
             width: 14rem;
+            margin-right: 3rem;
 
             .link {
                 margin-top: 1rem;
-                img {
-                    width: 100%;
-                    object-fit: cover;
+                text-decoration: none;
+                span {
+                    color: orange;
+                    font-size: 3rem;
+                    font-weight: bolder;
                 }
             }
         }

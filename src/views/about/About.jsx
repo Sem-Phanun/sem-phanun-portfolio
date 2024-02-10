@@ -1,4 +1,4 @@
-import Profile from '../../assets/image/profile.jpg'
+
 import { aboutMe } from '../../data/data';
 import "./about.scss";
 const About = () => {
