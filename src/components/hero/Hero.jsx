@@ -1,11 +1,11 @@
 import { introduce } from "../../data/data";
 import { Link } from "react-router-dom";
 import Instagram from "../../assets/social/instagram.png";
-import LinkedIn from "../../assets/social/linkedin.png";
+import LinkedIn from "../../assets/social/pngwing.com.png";
 import GitHub from "../../assets/social/github.png";
 import Facebook from "../../assets/social/facebook.png";
 import "./hero.scss";
-// import { FaInstagram,FaLinkedin,FaGithub } from "react-icons/fa";
+
 const Hero = () => {
   const handleLink = [
     {
@@ -64,7 +64,7 @@ const Hero = () => {
             return (
               <li key={index}>
                 <Link to={item.link}>
-                  <img src={item.social} />
+                  <img src={item.social} alt={item.brand} />
                 </Link>
               </li>
             );
