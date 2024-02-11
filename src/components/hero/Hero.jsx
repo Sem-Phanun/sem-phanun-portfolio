@@ -69,9 +69,6 @@ const Hero = () => {
               </li>
             );
           })}
-          {/* <li><a href="https://www.instagram.com/sudo.bright?"><FaInstagram className='icons'/></a></li>
-          <li><a href="https://www.linkedin.com/in/sem-phanun-51518b241/"><FaLinkedin className="icons" /></a></li>
-          <li><a href="https://github.com/Sem-Phanun"><FaGithub className="icons" /></a></li> */}
         </main>
       </section>
     </>

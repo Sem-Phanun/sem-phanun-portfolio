@@ -25,11 +25,9 @@ const Navbar = () => {
               </Link>
             </span>
           </li>
-
           {/* =======================================
                         Menu List
             =======================================*/}
-
           <ul
             className={toggle ? "mobile-menu" : "menu___list"}
             onClick={() => setToggle(false)}
@@ -43,8 +41,17 @@ const Navbar = () => {
                 </li>
               );
             })}
+            {/* <li className="menu-wrapper" onClick={()=> setToggle(!toggle)}>
+              {
+                toggle ? (
+                  <MdClose className="icon"/>
+                ) : (
+                  <HiMiniBars2 className="icon"/>
+                )
+              }
+            </li> */}
           </ul>
-          <ul className="bar2" onClick={() => setToggle(!toggle)}>
+          <ul className="menu-wrapper" onClick={() => setToggle(!toggle)}>
             <li>
               {toggle ? (
                 <MdClose className="icon" />
