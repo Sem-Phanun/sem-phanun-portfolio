@@ -1,62 +1,60 @@
 import { Link } from 'react-router-dom'
+import { FaFacebook, FaLinkedin } from "react-icons/fa6";
+import { FaGithub, FaInstagram } from 'react-icons/fa';
 import './footer.scss'
 const Footer = () => {
   return (
     <>
       <footer className='footer-container'>
-        <section className="logo">
-          <nav>
+        {/* section logo */}
+        <section className="section-logo">
+          <nav className='nav-link'>
             <Link className='link' to={"/"}>
               <span>Bright</span>
             </Link>
           </nav>
-          <nav>
+          <nav className='nav-email'>
             <li>
               <a href="#">semphanun.dev@gmail.com</a>
             </li>
           </nav>
         </section>
-        <section>
-          <article>
-            <h2>More</h2>
+        {/* section quick link */}
+        <section className='section-more'>
+          <article className='article-more'>
+            <h2 className='title'>More</h2>
           </article>
-          <nav>
+          <nav className='nav-more'>
             <li>
-              <a href="#about">About</a>
+              <Link to="/about" className='more-link'>About</Link>
             </li>
             <li>
-              <a href="#contact">Contact</a>
+              <Link to="/contact" className='more-link'>Contact</Link>
             </li>
           </nav>
         </section>
-        <section>
-          <article>
-            <h2>Social</h2>
+        {/* close section quick link */}
+        
+        {/* section social network */}
+        <section className='section-social'>
+          <article className='article-social'>
+            <h2 className='title'>Social</h2>
           </article>
-          <nav>
+          <nav className='nav-social'>
             <li>
-              <a href="#">Facebook</a>
+              <Link to="/"><FaFacebook/> Facebook</Link>
             </li>
             <li>
-              <a href="#">IG</a>
+              <Link to="https://www.instagram.com/sudo.bright?"><FaInstagram/> Instagram</Link>
             </li>
             <li>
-              <a href="#">Linkedin</a>
+              <Link to="https://www.linkedin.com/in/sem-phanun-51518b241/"><FaLinkedin/> Linkedin</Link>
             </li>
             <li>
-              <a href="#">GitHub</a>
+              <Link to="https://github.com/Sem-Phanun"><FaGithub/> GitHub</Link>
             </li>
           </nav>
         </section>
-        {/* <nav className="navbar">
-          <li>
-            <Link to={"/"}>Home</Link>
-          </li>
-          <li><Link to="/about">About Me</Link></li>
-          <li><Link to="/skill">Skill</Link></li>
-          <li><Link to="/project">Project</Link></li>
-          <li><Link to="/contact">Contact</Link></li>
-        </nav> */}
 
       </footer>
       <footer className='license'>
