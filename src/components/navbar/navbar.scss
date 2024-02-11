@@ -243,10 +243,12 @@
         }
       }
       .menu-wrapper {
+        position: absolute;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-shrink: 0;
+        margin-left: 4rem;
   
         li {
           .icon {
@@ -278,7 +280,7 @@
   .navbar___container {
     .navbar-wrapper {
       .logo___box {
-        margin-left: 2rem;
+        margin-left: 5rem;
       }
       .menu___list {
         li {
@@ -286,10 +288,9 @@
         }
       }
       .menu-wrapper {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-shrink: 0;
+        position: absolute;
+        margin-left: 4rem;
+        right: -40px;
   
         li {
           .icon {
