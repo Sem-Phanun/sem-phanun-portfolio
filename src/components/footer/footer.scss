@@ -1,7 +1,6 @@
 @use "src/index";
 $text-gray: #252525;
 .footer-container {
-  width: 100%;
   padding: 4rem 1rem;
   display: flex;
   flex-wrap: wrap;
@@ -84,7 +83,6 @@ $text-gray: #252525;
 }
 
 .license {
-  width: 100%;
   background: index.$gray;
   padding: 5px;
   p {
@@ -137,6 +135,11 @@ $text-gray: #252525;
 
 @media (max-width: 320px) {
   .footer-container {
-
+    width: 100vw;
+    margin-left: 1rem;
+  }
+  .license {
+    width: 100vw;
+    margin-left: 1rem;
   }
 }

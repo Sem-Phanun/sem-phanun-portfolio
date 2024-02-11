@@ -340,3 +340,14 @@
     }
   }
 }
+
+@media (max-width: 320px){
+  .navbar___container {
+    width: 100vw;
+    margin-left: 2rem;
+    .navbar-wrapper {
+
+      background-color: aqua;
+    }
+  }
+}
