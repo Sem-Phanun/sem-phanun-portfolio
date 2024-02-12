@@ -226,6 +226,7 @@
 @media (max-width: index.$break-point-sm) {
   .navbar___container {
     .navbar-wrapper {
+  
       padding: 10px;
       .logo___box {
         margin-left: 6rem;
@@ -245,6 +246,7 @@
       .menu-wrapper {
         position: absolute;
         display: flex;
+        right: -20px;
         justify-content: center;
         align-items: center;
         flex-shrink: 0;
@@ -289,8 +291,7 @@
       }
       .menu-wrapper {
         position: absolute;
-        margin-left: 4rem;
-        right: -40px;
+        right: -15vw;
   
         li {
           .icon {

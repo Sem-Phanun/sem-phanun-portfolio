@@ -123,13 +123,27 @@ $text-gray: #252525;
 
 @media (max-width: index.$break-point-xs) {
   .footer-container {
+
     .section-logo {
+      margin-left: -4rem;
       .nav-link {
-        span {
-          font-size: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 5rem;
+        .link {
+          span {
+            font-size: 1rem;
+          }
         }
       }
+      .nav-email {
+        margin-left: 3.6rem;
+      }
     }
+    // .section-more {
+    //   margin-left: -12rem;
+    // }
   }
 }
 

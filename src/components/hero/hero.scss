@@ -140,7 +140,8 @@
       }
       .profile___image {
         width: 220px;
-        height: 220px;
+        height: 200px;
+        margin-right: 1rem;
 
         .img-box {
           width: 100%;
@@ -174,7 +175,8 @@
       flex-direction: column-reverse;
 
       .profile___image {
-        margin-left: 3.5rem;
+        width: 200px;
+        margin-left: 4.5rem;
       }
     }
 
