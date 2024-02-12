@@ -1,26 +1,31 @@
 
 import { aboutMe } from '../../data/data';
+import Education from '../../components/education/Education'
 import "./about.scss";
 const About = () => {
   return (
     <>
-      <main className="about___container">
+      <section className="about___container">
         {
           aboutMe.map((about, index)=> {
             return (
               <>
-                <figure className='profile-picture'>
-                  <img src={about.profile} className='profile-image'/>
-                </figure>
-                <article className='about-block'>
-                  <h1>{about.title}</h1>
-                  <p>{about.description}</p>
-                </article>
+                <main key={index} className='about-wrapper'>
+                  <figure className='profile-picture'>
+                    <img src={about.profile} className='profile-image'/>
+                  </figure>
+                  <article className='about-block'>
+                    <h1>{about.title}</h1>
+                    <p>{about.description}</p>
+                  </article>
+                </main>
               </>
             )
           })
         }
-      </main>
+      </section>
+
+      <Education/>
     </>
   );
 };

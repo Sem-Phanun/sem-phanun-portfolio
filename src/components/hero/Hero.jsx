@@ -1,7 +1,7 @@
 import { introduce } from "../../data/data";
 import { Link } from "react-router-dom";
 import Instagram from "../../assets/social/instagram.png";
-import LinkedIn from "../../assets/social/pngwing.com.png";
+import LinkedIn from "../../assets/social/linkedin.png";
 import GitHub from "../../assets/social/github.png";
 import Facebook from "../../assets/social/facebook.png";
 import "./hero.scss";
@@ -41,14 +41,14 @@ const Hero = () => {
           return (
             <>
               <main className="hero-wrapper" key={index}>
-              <article className="hero-section">
-                <p className="greeting">{hero.greeting}</p>
-                <h1 className="box">{hero.name}</h1>
-                <p className="role">{hero.role}</p>
-              </article>
-              <figure className="profile___image">
-                <img src={hero.image} className="img-box" />
-              </figure>
+                <article className="hero-section">
+                  <p className="greeting">{hero.greeting}</p>
+                  <h1 className="box">{hero.name}</h1>
+                  <p className="role">{hero.role}</p>
+                </article>
+                <figure className="profile___image">
+                  <img src={hero.image} className="img-box" />
+                </figure>
               </main>
             </>
           );

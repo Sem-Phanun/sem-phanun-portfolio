@@ -1,7 +1,7 @@
 import ApiImage from '../assets/image/api.jpg'
 import PhoneShop from '../assets/image/phoneshop.png'
 import Todo from '../assets/image/Todo.jpg'
-import Hero from '../assets/image/me.jpg'
+import Hero from '../assets/image/profile.jpg'
 import ChatApp from '../assets/image/chatapp.jpg'
 export const navbar = [
     {
