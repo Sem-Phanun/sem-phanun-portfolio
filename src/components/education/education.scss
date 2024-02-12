@@ -17,13 +17,9 @@
 
 
   .timeline-wrapper {
-    background: #eaf6ff;
     padding: 2rem;
     border-radius: 15px;
-  }
-  h1 {
-    font-size: 1.1rem;
-    font-family: sans-serif;
+
   }
   .sessions {
     margin-top: 2rem;
@@ -44,7 +40,7 @@
       content: "";
       width: 15px;
       height: 15px;
-      background: white;
+      background: rgb(65, 230, 117);
       border: 1px solid #4e5ed3;
       box-shadow: 3px 3px 0px #bab5f8;
       box-shadow: 3px 3px 0px #bab5f8;
@@ -54,14 +50,12 @@
       top: 0px;
     }
   }
-  .time {
+  .school {
     color: #2a2839;
-    font-family: "Poppins", sans-serif;
     font-weight: 500;
   }
   p {
     color: #4f4f4f;
-    font-family: sans-serif;
     line-height: 1.5;
     margin-top: 0.4rem;
   }
