@@ -1,5 +1,5 @@
 import "./skill.scss";
-import NodeJs from '../../assets/image/nodejs.png'
+
 const Skill = () => {
   return (
     <>
@@ -9,9 +9,7 @@ const Skill = () => {
         </article>
 
         <main className="skill-wrapper">
-          <li>
-            <img src={NodeJs} alt="" />
-          </li>
+          
         </main>
       </section>
     </>
