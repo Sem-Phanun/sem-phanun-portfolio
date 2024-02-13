@@ -16,8 +16,8 @@ import MongoDb from '../assets/image/mongodb.png'
 import VsCode from '../assets/image/vscode.png'
 import Php from '../assets/image/php.png'
 import Postman from '../assets/image/postman.png'
-
-
+import VueJs from '../assets/image/vuejs.png'
+import Sass from '../assets/image/sass.png'
 
 export const navbar = [
     {
@@ -141,6 +141,11 @@ export const skill = [
         id: 9,
         image: MongoDb,
         name: "Mongodb"
+    },
+    {
+        id: 3,
+        image: Sass,
+        name: "Sass"
     }
 ]
 
@@ -154,6 +159,11 @@ export const fimilarSkill = [
         id: 2,
         image: Php,
         name: "Php"
+    },
+    {
+        id: 3,
+        image: VueJs,
+        name: "VueJs"
     }
 ]
 
