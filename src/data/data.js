@@ -47,31 +47,31 @@ export const projectList = [
     {
         id: 1,
         image: ApiImage,
-        title: "Ecommerce Api",
+        title: "Electronic api",
         description: "Ecommerce api build by NodeJs",
         link: "https://github.com/Sem-Phanun/ecommerce_api"
     },
     {
         id: 2,
         image: PhoneShop,
-        title: "React Electronic Store project",
+        title: "Electronic store",
         description: "React electronic project without responsive",
         link: "https://github.com/Sem-Phanun/react_ecm"
     },
-    {
-        id: 3,
-        image: Todo,
-        title: "Simple Todo List",
-        description: "Todo application with firebase",
-        link: "https://github.com/Sem-Phanun/React_Firebase"
-    },
-    {
-        id: 4,
-        image: ChatApp,
-        title: "Chat Application",
-        description: "Chat App with firebase",
-        link: "https://github.com/Sem-Phanun/real-time-chat-app"
-    }
+    // {
+    //     id: 3,
+    //     image: Todo,
+    //     title: "Todo List",
+    //     description: "Todo application with firebase",
+    //     link: "https://github.com/Sem-Phanun/React_Firebase"
+    // },
+    // {
+    //     id: 4,
+    //     image: ChatApp,
+    //     title: "Chat Application",
+    //     description: "Chat App with firebase",
+    //     link: "https://github.com/Sem-Phanun/real-time-chat-app"
+    // }
 ]
 
 
