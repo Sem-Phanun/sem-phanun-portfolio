@@ -11,7 +11,7 @@ const Contact = () => {
         </article>
         <main className="content">
           <form className="contact-form">
-            <div class="form-group">
+            <div className="form-group">
               <label htmlFor="">Name</label>
               <input
                 type="text"
@@ -21,7 +21,7 @@ const Contact = () => {
               />
             </div>
             <div className="form-group">
-              <label for="email">Email</label>
+              <label htmlFor="email">Email</label>
               <input
                 type="email"
                 className="form-control"
