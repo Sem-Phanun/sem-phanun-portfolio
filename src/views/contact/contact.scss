@@ -64,13 +64,14 @@
   }
 }
 
+
 @media (max-width: index.$break-point-sm) {
   .contact-container {
     .content {
       width: 100vw;
 
       .contact-form {
-        margin-right: 2rem;
+        margin-right: 5rem;
       }
 
     }
