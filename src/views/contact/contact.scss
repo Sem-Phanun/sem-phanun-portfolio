@@ -17,48 +17,62 @@
 
   .content {
     display: flex;
-    flex-direction: column;
     margin: 2rem auto;
-    width: 370px;
-    gap: 1rem;
+    width: 60vw;
 
-    li {
+    .contact-form {
+      width: 100%;
+      max-width: 500px;
+      margin: 10px auto;
+      padding: 15px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  
+      .form-group {
+        margin-bottom: 10px;
 
-        border-radius: 3rem;
-        padding: 1rem;
-        border: 1px solid index.$orange-500;
-        
-        a {
-            text-decoration: none;
-            font-size: 1.5rem;
-            color: index.$black;
-        
+        label {
+          display: block;
+          font-weight: 600;
+          margin-bottom: 5px;
 
-            .contact-icons {
-                font-size: 2rem;
-            }
         }
+        input,textarea {
+          width: 95%;
+          padding: 5px 10px;
+          border-radius: 4px;
+          border: 1px solid #ddd;
+          resize: none;
+          outline: none;
+        }
+          
+      }
+      button {
+        width: 100%;
+        padding: 5px 10px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #0062cc;
+        }
+      }
+
     }
   }
 }
 
+@media (max-width: index.$break-point-sm) {
+  .contact-container {
+    .content {
+      width: 100vw;
 
-@media (max-width: index.$break-point-sm){
-    .contact-container {
-        .content {
-            width: 250px;
+      .contact-form {
+        margin-right: 2rem;
+      }
 
-            li {
-                padding: .5rem;
-                a {
-                    font-size: 1rem; 
-
-                    .contact-icons {
-                        font-size: 1rem;
-                    }
-                }
-
-            }
-        }
     }
+  }
 }
