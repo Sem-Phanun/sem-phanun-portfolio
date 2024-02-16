@@ -3,9 +3,9 @@ import Dashboard from '../../components/dasboard/Dashboard'
 
 const Admin = () => {
   return (
-    <div>
-        <Dashboard/>
-    </div>
+    <>
+      <Dashboard/>
+    </>
   )
 }
 
