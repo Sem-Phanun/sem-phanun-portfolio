@@ -5,7 +5,7 @@ import "./about.scss";
 const About = () => {
   return (
     <>
-      <Layout title={"About"}>
+      <Layout title={"ABOUT - PORTFOLIO"}>
         <section className="about___container">
           {aboutMe.map((about, index) => {
             return (

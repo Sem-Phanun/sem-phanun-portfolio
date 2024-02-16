@@ -6,7 +6,7 @@ const Project = () => {
   const { id } = useParams()
   return (
     <>
-      <Layout title={"Project"}>
+      <Layout title={"PROJECT - PORTFOLIO"}>
         <section className="project___container">
           <article className="title-wrapper">
             <h1>Projects</h1>

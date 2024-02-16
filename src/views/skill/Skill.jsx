@@ -4,7 +4,7 @@ import Layout from "../../components/layout/Layout";
 const Skill = () => {
   return (
     <>
-      <Layout title={"Skill"}>
+      <Layout title={"SKILL - PORTFOLIO"}>
       <section className="skill___container">
         <article className="title-wrapper">
           <h1 className="title">Skill</h1>
