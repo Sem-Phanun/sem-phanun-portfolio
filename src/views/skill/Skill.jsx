@@ -1,8 +1,10 @@
 import "./skill.scss";
 import { fimilarSkill, skill, tools } from "../../data/data";
+import Layout from "../../components/layout/Layout";
 const Skill = () => {
   return (
     <>
+      <Layout title={"Skill"}>
       <section className="skill___container">
         <article className="title-wrapper">
           <h1 className="title">Skill</h1>
@@ -46,6 +48,7 @@ const Skill = () => {
           })}
         </main>
       </section>
+      </Layout>
     </>
   );
 };

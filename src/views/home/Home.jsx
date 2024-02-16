@@ -1,16 +1,16 @@
 
 import Hero from '../../components/hero/Hero'
-import About from '../about/About'
-import Skill from '../skill/Skill'
-import Project from '../project/Project'
 import './home.scss'
+import Layout from '../../components/layout/Layout'
 const Home = () => {
   return (
     <>
-        <Hero/>
-        <About/>
-        <Skill/>
-        <Project/>
+        <Layout title={"HOME - PORTFOLIO"}>
+          <Hero/>
+          {/* <About/>
+          <Skill/>
+          <Project/> */}
+        </Layout>
     </>
   )
 }

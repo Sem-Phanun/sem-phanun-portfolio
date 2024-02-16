@@ -55,7 +55,7 @@ const Hero = () => {
 
       <section className="social-wrapper">
         <article className="title-wrapper">
-          <h2 className="title">Follow me an social networks!</h2>
+          <h2 className="title">Follow me on social networks!</h2>
         </article>
       </section>
       <section className="social-wrapper">
