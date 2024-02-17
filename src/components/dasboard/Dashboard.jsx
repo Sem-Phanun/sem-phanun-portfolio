@@ -1,4 +1,4 @@
-import { NavLink,useNavigate } from 'react-router-dom'
+import { NavLink,Outlet,useNavigate } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { FaUsers } from 'react-icons/fa' 
 import { BiCategoryAlt } from 'react-icons/bi'
@@ -44,15 +44,21 @@ const Dashboard = () => {
           </li>
 
           <li >
-            <NavLink to='/dashboard/hero' className='navLink'>
+            <NavLink to='/dashboard/admin/hero' className='navLink'>
                 <FaUsers/> 
                 <span className={`${!expand && 'hidden'} origin-left duration-200`}>Hero</span>
             </NavLink>
           </li>
           <li >
-            <NavLink to='/dashboard/about' className='navLink'>
+            <NavLink to='/dashboard/admin/about' className='navLink'>
                 <BiCategoryAlt/> 
                 <span className={`${!expand && 'hidden'} origin-left duration-200`}>About</span>
+            </NavLink>
+          </li>
+          <li >
+            <NavLink to='/dashboard/admin/skill' className='navLink'>
+                <BiCategoryAlt/> 
+                <span className={`${!expand && 'hidden'} origin-left duration-200`}>Skill</span>
             </NavLink>
           </li>
         </nav>
@@ -74,6 +80,7 @@ const Dashboard = () => {
           </div>
         </nav>
       </aside>
+      <Outlet/>
     </div>
   )
 }

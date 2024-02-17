@@ -11,6 +11,8 @@ import ProjectDetails from "./views/project/ProjectDetails";
 import Admin from "./views/admin/Admin";
 import Register from "./views/auth/register/Register";
 import Auth from "./views/auth/Auth";
+import AboutAdmin from "./views/admin/aboutHero/AboutAdmin";
+import Hero from "./views/admin/hero/Hero";
 const App = () => {
   return (
     <>
@@ -24,6 +26,9 @@ const App = () => {
 
         <Route path="/dashboard" element={<Admin/>}>
           <Route path="admin" element={<Dashboard/>}/>
+          <Route path="admin/hero" element={<Hero/>}/>
+          <Route path="admin/about" element={<AboutAdmin/>}/>
+          <Route path="admin/skill"/>
         </Route>
         <Route path="/admin/register" element={<Auth/>}>
           <Route path="register" element={<Register/>}/>
