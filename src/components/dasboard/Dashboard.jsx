@@ -1,28 +1,80 @@
-
-
+import { NavLink,useNavigate } from 'react-router-dom'
+import { useEffect, useState } from 'react'
+import { FaUsers } from 'react-icons/fa' 
+import { BiCategoryAlt } from 'react-icons/bi'
+import { 
+  AiOutlineArrowLeft
+} from 'react-icons/ai'
+import { MdSpaceDashboard,MdKeyboardArrowUp } from 'react-icons/md'
+import './dashboard.scss'
 const Dashboard = () => {
-  return (
-    <>
-      <section className="dashboard-container">
+  const [isOpen, setIsOpen] = useState(false)
+  const [expand, setExpand] = useState(true)
+
+  const navigate = useNavigate()
+  useEffect(()=>{
+    const login = localStorage.getItem('Bright')
+    if(login == "0"){
+      navigate('/dashboard/auth/login')
+    }
+  })
+  const handleLogout = () => {
+    localStorage.setItem("Bright", "0")
+    window.location.href='/dashboard/auth/login'
+  }
+
+  return(
+    <div className='flex-container'>
+      <aside className={`${expand ? '': 'w-40'} sidebar`}>
+        <button className={`button ${!expand && 'rotate-180'}`}>
+          <AiOutlineArrowLeft className='text-xl' onClick={()=>setExpand(!expand)}/>
+        </button>
         <nav>
-          Bright
+          <NavLink to='/dashboard' className='dashboard-link'>
+            <h1 className={`title ${!expand && "scale-0"}`}
+            >Admin</h1>
+          </NavLink>
         </nav>
-        <nav>
+        <nav className='pt-6'>
           <li>
-            Hero
+            <NavLink to='/dashboard' className='navLink'>
+                <MdSpaceDashboard/> 
+                <span className={`${!expand && 'hidden'}`}>Dashboard</span>
+            </NavLink>
           </li>
-          <li>
-            About
+
+          <li >
+            <NavLink to='/dashboard/hero' className='navLink'>
+                <FaUsers/> 
+                <span className={`${!expand && 'hidden'} origin-left duration-200`}>Hero</span>
+            </NavLink>
           </li>
-          <li>
-            Skill
-          </li>
-          <li>
-            Project
+          <li >
+            <NavLink to='/dashboard/about' className='navLink'>
+                <BiCategoryAlt/> 
+                <span className={`${!expand && 'hidden'} origin-left duration-200`}>About</span>
+            </NavLink>
           </li>
         </nav>
-      </section>
-    </>
+
+        <nav className="admin-profile">
+          {isOpen && (
+            <main className={`logout ${!expand && 'min-logout'}`}>
+              <li onClick={handleLogout} className={`${!expand && 'text-xs'}`}>logout</li>
+            </main>
+          )}
+          <div className={`profile ${!expand && "min-profile"}`}>
+            <span 
+              className={`border-name ${!expand && '-mr-4'}`}
+            >B</span>
+            <h3 className={`box-1 ${!expand && 'scale-0'}`}>Bright</h3>
+            <button onClick={()=>setIsOpen(!isOpen)} className={`btn ${!expand && 'scale-0'}`}>
+              <MdKeyboardArrowUp className='text-2xl'/>
+            </button>
+          </div>
+        </nav>
+      </aside>
+    </div>
   )
 }
 
