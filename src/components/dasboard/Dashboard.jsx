@@ -15,6 +15,7 @@ const Dashboard = () => {
   const [expand, setExpand] = useState(true)
 
   const navigate = useNavigate()
+
   useEffect(()=>{
     const login = localStorage.getItem('Bright')
     if(login == "0"){

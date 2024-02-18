@@ -72,6 +72,17 @@ $table-cell-padding: 10px;
               background-color: $table-bg-color;
             }
 
+            .image-box {
+                width: 40px;
+                height: 40px;
+
+                img {
+                    object-fit: contain;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
             .action-wrapper {
                 display: flex;
                 justify-content:center;

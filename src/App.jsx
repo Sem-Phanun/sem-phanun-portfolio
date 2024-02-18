@@ -11,6 +11,7 @@ import Admin from "./views/admin/Admin";
 import Register from "./views/auth/register/Register";
 import Auth from "./views/auth/Auth";
 import AboutAdmin from "./views/admin/aboutHero/AboutAdmin";
+import Create from "./views/admin/hero/create/Create"
 import Hero from "./views/admin/hero/Hero";
 import SkillHero from './views/admin/skillHero/SkillHero'
 import ProjectHero from './views/admin/project/Project'
@@ -28,6 +29,7 @@ const App = () => {
         <Route path="/dashboard" element={<Admin/>}>
           <Route path="admin" element={<Dashboard/>}/>
           <Route path="admin/hero" element={<Hero/>}/>
+          <Route path="admin/hero/create" element={<Create/>}/>
           <Route path="admin/about" element={<AboutAdmin/>}/>
           <Route path="admin/skill" element={<SkillHero/>}/>
           <Route path="admin/project" element={<ProjectHero/>}/>

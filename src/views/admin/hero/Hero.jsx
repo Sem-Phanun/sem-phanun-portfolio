@@ -2,7 +2,9 @@ import {FiEdit} from 'react-icons/fi'
 import { MdDelete } from 'react-icons/md'
 import { CiSaveDown1 } from 'react-icons/ci'
 import './Hero.scss'
+import { Link } from 'react-router-dom'
 const Hero = () => {
+
   return (
     <>
       <section className="hero-container">
@@ -13,9 +15,9 @@ const Hero = () => {
         <main className='content-wrapper'>
           
           <section className='button-wrapper'>
-            <button className='btn'><CiSaveDown1 className='btn-icons'/></button>
+            <Link to="/dashboard/admin/hero/create" className='btn'><CiSaveDown1 className='btn-icons'/></Link>
           </section>
-          <table class="table">
+          <table className="table">
             <thead>
               <tr>
                 <th>ID</th>
@@ -32,8 +34,8 @@ const Hero = () => {
                 <td>Hello I'm</td>
                 <td>Phanun</td>
                 <td>React Developer</td>
-                <td>
-                  <img src="" alt="" />
+                <td className='image-box'>
+                  <img src="https://img.freepik.com/free-photo/smart-attractive-asian-glasses-male-standing-smile-with-freshness-joyful-casual-blue-shirt-portrait-white-background_609648-1226.jpg?size=626&ext=jpg&ga=GA1.1.4964640.1708269317&semt=sph" alt="" />
                 </td>
                 <td className='action-wrapper'>
                   <button className='btn-wrapper btn-primary'><FiEdit className='btn-icons'/></button>
