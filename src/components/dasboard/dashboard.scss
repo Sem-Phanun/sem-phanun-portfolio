@@ -3,10 +3,10 @@
 
   .sidebar {
     width: 18vw;
-    transition: width 0.3s;
+    transition: 0.3s;
     padding: 5px;
     padding-top: 8px;
-    height: 100vh;
+    height: 98vh;
     background-color: #2d3748;
     position: relative;
 
@@ -54,7 +54,7 @@
           transform-origin: left;
           transition: 0.3s;
           transform: scale(1);
-            text-align: center;
+          margin-left: 4rem;
           &.scale-0 {
             transform: scale(0);
           }
@@ -91,7 +91,7 @@
 
     .admin-profile {
         position: absolute;
-        bottom: 25px;
+        bottom: 30px;
       .logout {
         width: 6vw;
         height: 3rem;
@@ -153,20 +153,25 @@
 
         .btn {
           margin-left: 1rem;
-          width: 3vw;
           color: #a0aec0;
           border-radius: 100%;
+          width: 30px;
+          height: 30px;
           border: none;
           &.scale-0 {
-            width: 30px;
+            width: 25px;
+            height: 25px;
             position: absolute;
             bottom: 4vw;
             margin-left: 3px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
           }
 
           .text-2xl {
             cursor: pointer;
-            font-size: 20px;
+            font-size: 24px;
           }
         }
       }

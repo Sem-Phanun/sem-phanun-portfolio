@@ -1,0 +1,108 @@
+$table-bg-color: #f2f2f2;
+$table-header-bg-color: #717171;
+$table-header-color: #fff;
+$table-row-hover-color: #ddd;
+
+$table-border-color: #ccc;
+$table-border-width: 1px;
+$table-border-style: solid;
+
+$table-cell-padding: 10px;
+
+
+
+
+.hero-container {
+    background-color: #fff;
+    width: 100vw;
+
+    .title-wrapper {
+        margin: 1rem 3rem;
+
+        .title {
+            font-size: 2rem;
+        }
+    }
+
+
+    .content-wrapper {
+
+        .button-wrapper {
+            margin: 1rem 3rem;
+            .btn {
+                width: 40px;
+                padding: 10px;
+                border: none;
+                cursor: pointer;
+                border-radius: .5rem;
+
+                .btn-icons {
+                    color: #333;
+
+                    &:hover {
+                        color: #fff;
+                    }
+                }
+
+                &:hover {
+                    background-color: #5aff15;
+                }
+            }
+        }
+        .table {
+            width: 70vw;
+            margin: 1rem 3rem;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            font-family: Arial, sans-serif;
+            
+            th, td {
+                text-align: center;
+              padding: $table-cell-padding;
+              border: $table-border-width $table-border-style $table-border-color;
+            }
+            
+            th {
+              background-color: $table-header-bg-color;
+              color: $table-header-color;
+            }
+            
+            
+            tbody tr:nth-child(even) {
+              background-color: $table-bg-color;
+            }
+
+            .action-wrapper {
+                display: flex;
+                justify-content:center;
+                .btn-wrapper {
+                    width: 40px;
+                    padding: 10px;
+                    border: none;
+                    cursor: pointer;
+                    border-radius: .5rem;
+                    margin: 5px;
+
+                    &.btn-primary {
+                        background-color: #7fc8f8;
+
+                        .btn-icons {
+                            color: #fff;
+                        }
+                    }
+                    &.btn-danger {
+                        background-color: #ff4d6d;
+
+                        .btn-icons {
+                            color: #fff;
+                        }
+                    }
+
+                    
+                }
+            }
+        }
+    }
+
+}
+

@@ -1,7 +1,10 @@
 import { NavLink,Outlet,useNavigate } from 'react-router-dom'
 import { useEffect, useState } from 'react'
-import { FaUsers } from 'react-icons/fa' 
+
 import { BiCategoryAlt } from 'react-icons/bi'
+import {CiUser} from 'react-icons/ci'
+import {SiAboutdotme} from 'react-icons/si'
+import {FaTools} from 'react-icons/fa'
 import { 
   AiOutlineArrowLeft
 } from 'react-icons/ai'
@@ -24,7 +27,7 @@ const Dashboard = () => {
   }
 
   return(
-    <div className='flex-container'>
+    <section className='flex-container'>
       <aside className={`${expand ? '': 'w-40'} sidebar`}>
         <button className={`button ${!expand && 'rotate-180'}`}>
           <AiOutlineArrowLeft className='text-xl' onClick={()=>setExpand(!expand)}/>
@@ -45,20 +48,26 @@ const Dashboard = () => {
 
           <li >
             <NavLink to='/dashboard/admin/hero' className='navLink'>
-                <FaUsers/> 
+                <CiUser/>
                 <span className={`${!expand && 'hidden'} origin-left duration-200`}>Hero</span>
             </NavLink>
           </li>
           <li >
             <NavLink to='/dashboard/admin/about' className='navLink'>
-                <BiCategoryAlt/> 
-                <span className={`${!expand && 'hidden'} origin-left duration-200`}>About</span>
+                <SiAboutdotme/>
+                <span className={`${!expand && 'hidden'}`}>About</span>
             </NavLink>
           </li>
           <li >
             <NavLink to='/dashboard/admin/skill' className='navLink'>
                 <BiCategoryAlt/> 
-                <span className={`${!expand && 'hidden'} origin-left duration-200`}>Skill</span>
+                <span className={`${!expand && 'hidden'}`}>Skill</span>
+            </NavLink>
+          </li>
+          <li >
+            <NavLink to='/dashboard/admin/project' className='navLink'>
+                <FaTools/>
+                <span className={`${!expand && 'hidden'}`}>Project</span>
             </NavLink>
           </li>
         </nav>
@@ -81,7 +90,7 @@ const Dashboard = () => {
         </nav>
       </aside>
       <Outlet/>
-    </div>
+    </section>
   )
 }
 
