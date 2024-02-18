@@ -5,8 +5,8 @@ import './create.scss'
 const create = () => {
   const [loading, setLoading] = useState(false)
   const [err, setErr] = useState(false)
-  const handleSubmit = () => {
-
+  const handleSubmit = (e) => {
+    e.preventDefault()
   }
   return (
     <>

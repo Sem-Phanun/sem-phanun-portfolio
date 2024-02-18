@@ -78,7 +78,7 @@ export const projectList = [
 export const introduce = [
     {
         id: 1,
-        greeting: "Hello i'm",
+        title: "Hello i'm",
         name: "Phanun",
         role: "React Developer",
         image: Hero

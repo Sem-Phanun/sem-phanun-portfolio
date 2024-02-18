@@ -1,12 +1,31 @@
 import { introduce } from "../../data/data";
+import axios from "axios";
 import { Link } from "react-router-dom";
 import Instagram from "../../assets/social/instagram.png";
 import LinkedIn from "../../assets/social/linkedin.png";
 import GitHub from "../../assets/social/github.png";
 import Facebook from "../../assets/social/facebook.png";
+import { useState, useEffect } from "react";
 import "./hero.scss";
 
 const Hero = () => {
+  const [hero, setHero] = useState([]);
+
+  // Fetch hero data from the API on component mount
+  useEffect(() => {
+    handleApi();
+  }, []);
+
+
+  const handleApi = async () => {
+      const res = await axios.get("http://localhost:3000/api/get-hero");
+      console.log(res.data);
+      if(res.data){
+        setHero(res.data)
+        
+      }
+  }
+
   const handleLink = [
     {
       id: 1,
@@ -37,20 +56,21 @@ const Hero = () => {
   return (
     <>
       <section className="hero___container">
-        {introduce.map((hero, index) => {
+        {introduce.map((item, index) => {
           return (
             <main className="hero-wrapper" key={index}>
               <article className="hero-section">
-                <p className="greeting">{hero.greeting}</p>
-                <h1 className="box">{hero.name}</h1>
-                <p className="role">{hero.role}</p>
+                <p className="greeting">{item.title}</p>
+                <h1 className="box">{item.name}</h1>
+                <p className="role">{item.role}</p> 
               </article>
               <figure className="profile___image">
-                <img src={hero.image} className="img-box" />
+                <img src={item.image} className="img-box" />
               </figure>
             </main>
           );
         })}
+
       </section>
 
       <section className="social-wrapper">
