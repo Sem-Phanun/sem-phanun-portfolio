@@ -16,15 +16,14 @@ const Hero = () => {
     handleApi();
   }, []);
 
-
   const handleApi = async () => {
-      const res = await axios.get("http://localhost:3000/api/get-hero");
-      console.log(res.data);
-      if(res.data){
-        setHero(res.data)
-        
-      }
-  }
+    await axios.get("http://localhost:3000/api/get-hero")
+    .then(res => {
+      setHero(res.data.hero)
+    }).catch(err => {
+      console.log(err)
+    })
+  };
 
   const handleLink = [
     {
@@ -62,15 +61,14 @@ const Hero = () => {
               <article className="hero-section">
                 <p className="greeting">{item.title}</p>
                 <h1 className="box">{item.name}</h1>
-                <p className="role">{item.role}</p> 
+                <p className="role">{item.role}</p>
               </article>
               <figure className="profile___image">
-                <img src={item.image} className="img-box" />
+                <img src={item.image} alt={item.mame} className="img-box" />
               </figure>
             </main>
           );
         })}
-
       </section>
 
       <section className="social-wrapper">
